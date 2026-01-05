@@ -1,6 +1,6 @@
 # CDP for C++
 
-A modern, production-ready C++ library for Chrome DevTools Protocol (CDP) automation.
+A modern C++ library for Chrome DevTools Protocol (CDP) automation.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![C++23](https://img.shields.io/badge/C%2B%2B-23-blue.svg)](https://isocpp.org/std/the-standard)
