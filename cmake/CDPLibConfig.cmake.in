@@ -1,0 +1,10 @@
+@PACKAGE_INIT@
+
+include("${CMAKE_CURRENT_LIST_DIR}/CDPLibTargets.cmake")
+
+check_required_components(CDPLib)
+
+# Provide convenient variables
+set(CDPLIB_INCLUDE_DIRS "${PACKAGE_PREFIX_DIR}/include")
+set(CDPLIB_LIBRARIES CDPLib::cdp)
+set(CDPLIB_SHARED_LIBRARIES CDPLib::cdp_shared)
