@@ -1,0 +1,68 @@
+# Build directories
+build/
+out/
+cmake-build-*/
+.output/
+
+# Test data
+*.json
+!package.json
+!tsconfig.json
+
+# IDE files
+.vs/
+.vscode/
+*.vcxproj.user
+*.suo
+*.sdf
+*.opensdf
+*.VC.db
+*.VC.VC.opendb
+.idea/
+*.swp
+*.swo
+*~
+
+# Compiled files
+*.o
+*.obj
+*.a
+*.lib
+*.dll
+*.exe
+*.pdb
+*.ilk
+*.exp
+
+# Generated files
+compile_commands.json
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+*.cmake
+!cmake/*.cmake
+!cmake/*.cmake.in
+
+# Package files
+*.zip
+*.tar.gz
+*.7z
+
+# Test output
+*.png
+*.pdf
+*.log
+
+# Chrome temporary profiles
+cdp_chrome_*/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
