@@ -36,7 +36,6 @@ message(STATUS "Building for platform: ${CDP_PLATFORM}")
 
 # Build Options
 option(CDP_BUILD_EXAMPLES "Build example programs" ON)
-option(CDP_BUILD_TESTS "Build unit tests" OFF)
 option(CDP_ENABLE_WARNINGS "Enable strict compiler warnings" ON)
 option(CDP_WARNINGS_AS_ERRORS "Treat warnings as errors" OFF)
 option(CDP_ENABLE_ASAN "Enable Address Sanitizer (Debug builds only)" OFF)
@@ -191,6 +190,25 @@ set_target_properties(cdp_shared PROPERTIES
     SOVERSION ${PROJECT_VERSION_MAJOR}
     OUTPUT_NAME cdp
 )
+
+# Examples
+if(CDP_BUILD_EXAMPLES)
+    # Basic example
+    add_executable(cdp_example examples/main.cpp)
+    target_link_libraries(cdp_example PRIVATE cdp)
+
+    # Comprehensive API test
+    add_executable(cdp_comprehensive examples/comprehensive_test.cpp)
+    target_link_libraries(cdp_comprehensive PRIVATE cdp)
+
+    # Torture test
+    add_executable(cdp_torture_test examples/torture_test.cpp)
+    target_link_libraries(cdp_torture_test PRIVATE cdp)
+
+    # High-level test test
+    add_executable(cdp_highlevel_test examples/highlevel_test.cpp)
+    target_link_libraries(cdp_highlevel_test PRIVATE cdp)
+endif()
 
 # Installation
 include(GNUInstallDirs)
