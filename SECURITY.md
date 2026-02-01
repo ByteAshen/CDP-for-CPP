@@ -12,7 +12,7 @@ We take security vulnerabilities seriously. If you discover a security issue, pl
 
 ### How to Report
 
-1. **Create a private security advisory** on GitHub at: https://github.com/ByteAshen/cdp-cpp/security/advisories/new
+1. **Create a private security advisory** on GitHub at: https://github.com/ByteAshen/CDP-for-CPP/security/advisories/new
 2. Include the following information:
    - Description of the vulnerability
    - Steps to reproduce
@@ -61,3 +61,4 @@ CDP for C++ has **zero external dependencies** (only Windows system libraries). 
 - Custom Base64 and SHA1 implementations
 
 All cryptographic operations (SHA1 for WebSocket handshake) are implemented internally and are not used for security-critical purposes.
+
