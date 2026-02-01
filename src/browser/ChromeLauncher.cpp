@@ -265,6 +265,11 @@ std::vector<ChromeInstallation> ChromeLauncher::findAllInstallations() {
         pathsToCheck.push_back({base + "\\Google\\Chrome\\chrome.exe", ChromeChannel::Stable});
         pathsToCheck.push_back({base + "\\Chrome\\Application\\chrome.exe", ChromeChannel::Stable});
         pathsToCheck.push_back({base + "\\Chromium\\chrome.exe", ChromeChannel::Chromium});
+    
+    
+        pathsToCheck.push_back({base + "\\Microsoft\\Edge\\Application\\msedge.exe", ChromeChannel::Edge});
+        pathsToCheck.push_back({base + "\\Microsoft\\Edge SxS\\Application\\msedge.exe", ChromeChannel::Edge});
+        pathsToCheck.push_back({base + "\\Microsoft\\Edge\\msedge.exe", ChromeChannel::Edge});
     };
 
     
@@ -434,7 +439,8 @@ bool ChromeLauncher::isValidChrome(const std::string& path) {
         std::transform(filename.begin(), filename.end(), filename.begin(),
             [](unsigned char c) { return static_cast<char>(std::tolower(c)); });
         return filename.find("chrome") != std::string::npos ||
-               filename.find("chromium") != std::string::npos;
+               filename.find("chromium") != std::string::npos ||
+               filename.find("edge") != std::string::npos;
     } catch (const std::exception&) {
         return false;
     }
