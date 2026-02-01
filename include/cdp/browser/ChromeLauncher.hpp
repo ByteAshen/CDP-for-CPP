@@ -29,6 +29,7 @@ enum class ChromeChannel {
     Beta,       
     Dev,        
     Canary,     
+    Edge,       
     Chromium,   
     Custom      
 };
@@ -49,6 +50,7 @@ struct ChromeInstallation {
             case ChromeChannel::Beta: return "Beta";
             case ChromeChannel::Dev: return "Dev";
             case ChromeChannel::Canary: return "Canary";
+            case ChromeChannel::Edge: return "Edge";
             case ChromeChannel::Chromium: return "Chromium";
             case ChromeChannel::Custom: return "Custom";
             default: return "Unknown";
