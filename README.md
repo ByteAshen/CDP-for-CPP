@@ -296,7 +296,6 @@ for (auto& t : threads) t.join();
 
 - [BUILD.md](BUILD.md) - Detailed build instructions
 - [CONTRIBUTING.md](CONTRIBUTING.md) - Contribution guidelines
-- [CHANGELOG.md](CHANGELOG.md) - Version history
 
 ## Acknowledgments
 
